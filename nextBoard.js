@@ -7,13 +7,16 @@ const board = createBoard (5)
 
 function nextBoard (currentBoard) {
   let newBoard = [...currentBoard]
-    currentBoard.map((row, rowIndex) =>
-      row.map((cell, cellIndex) => {
-        const aliveNeighbours = countAliveNeighbours(cellIndex, rowIndex, board)
-        console.log('this is aliveNeighbours:', aliveNeighbours)
-      })
-
-    )
+  console.log('this is currentBoard: ', currentBoard)
+  currentBoard.map((row, rowIndex) =>
+    row.map((cell, cellIndex) => {
+      const aliveNeighbours = countAliveNeighbours(cellIndex, rowIndex, currentBoard)
+      newBoard[rowIndex][cellIndex] = nextCellState(cell, aliveNeighbours)
+    })
+  )
+  console.log('this is newBoard: ', newBoard)
+  console.log('this is currentBoard: ', currentBoard)
+  return newBoard
 }
 
 nextBoard(board)
