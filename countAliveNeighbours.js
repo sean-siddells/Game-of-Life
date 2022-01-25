@@ -3,6 +3,7 @@ const createBoard = require('./createBoard')
 const getValues = require ('./getValues')
 const testBoard = createBoard(5)
 
+
 function countAliveNeighbours (rowIndex, columnIndex, board) {
   let aliveNeighbours = 0
   const neighboursArr = getNeighbours(rowIndex, columnIndex, board)
