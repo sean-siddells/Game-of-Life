@@ -6,8 +6,10 @@ const getNeighbours = require('./getNeighbours')
 const board = createBoard (5)
 
 function nextBoard (currentBoard) {
-  let newBoard = [...currentBoard]
-  console.log('this is currentBoard: ', currentBoard)
+  let newBoard = []
+  for (let i = 0; i < currentBoard.length; i++) {
+    newBoard[i] = currentBoard[i].slice()
+  }
   currentBoard.map((row, rowIndex) =>
     row.map((cell, cellIndex) => {
       const aliveNeighbours = countAliveNeighbours(cellIndex, rowIndex, currentBoard)
