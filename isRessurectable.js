@@ -1,7 +1,5 @@
 function isRessurectable (neighbourCount) {
-if (neighbourCount === 3) {
-  return true
-}
+  return (neighbourCount === 3 ? true : false)
 }
 
 module.exports = isRessurectable

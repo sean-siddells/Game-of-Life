@@ -8,7 +8,6 @@ function createBoard (size) {
     board.push(Array.from({length: size}, () => randomCellGen()))
     console.log(...board[i])
   }
-  console.log(board)
   return board
 
 }

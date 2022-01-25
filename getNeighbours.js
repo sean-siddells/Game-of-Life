@@ -23,14 +23,4 @@ function getNeighbours (cellRow, cellColumn, board) {
   return neighboursArrFinal
 }
 
-//gets the values of each of the neighbouring cells
-function getValues(arr, board) {
-  const values = []
-  arr.map(x => {
-    values.push(board[x[0]][x[1]])
-  })
-  console.log('this is values: ', values)
-  return values
-}
-
-module.exports = { getNeighbours, getValues }
+module.exports = getNeighbours

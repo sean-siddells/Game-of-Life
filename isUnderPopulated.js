@@ -1,7 +1,5 @@
 function isUnderPopulated (neighbourCount) {
-  if (neighbourCount < 2) {
-    return true
-  }
+  return (neighbourCount < 2 ? true : false )
 }
 
 module.exports = isUnderPopulated
