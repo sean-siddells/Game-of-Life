@@ -3,10 +3,10 @@ const createBoard  = require('./createBoard')
 
 
 // const testBoard = createBoard(5)
-let neighboursArr = []
 
 // 3 different situations- centre piece, corner piece, side piece
 function getNeighbours (cellRow, cellColumn, board) {
+  let neighboursArr = []
   board.map((rows, x) => {
     if (x === cellRow) {
       rows.map((cell, y) => {
@@ -18,8 +18,8 @@ function getNeighbours (cellRow, cellColumn, board) {
   })
   const currentCellValue = board[cellRow][cellColumn]
   neighboursArrFinal = neighboursArr.filter(element => indicesAreOutOfBounds(element[0], element[1], board) === false )
-  console.log('this is neigboursArr: ', neighboursArrFinal);
-  console.log('this is currentCell value: ', currentCellValue)
+  // console.log('this is neigboursArr: ', neighboursArrFinal);
+  // console.log('this is currentCell value: ', currentCellValue)
   return neighboursArrFinal
 }
 

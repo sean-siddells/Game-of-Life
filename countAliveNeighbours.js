@@ -9,7 +9,7 @@ function countAliveNeighbours (rowIndex, columnIndex, board) {
   const neighboursArr = getNeighbours(rowIndex, columnIndex, board)
   const valueArr = getValues(neighboursArr, board)
   valueArr.map(value => value === 1 ? aliveNeighbours ++ : null)
-  console.log('this is aliveNeighbour count: ', aliveNeighbours)
+  // console.log('this is aliveNeighbour count: ', aliveNeighbours)
   return aliveNeighbours
 }
 
