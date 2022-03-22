@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react'
+// import { createBoard } from '../../server/algos/createBoard'
 
 function App () {
   const canvasRef = useRef(null)
@@ -9,8 +10,8 @@ function App () {
 
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
-    canvas.style.width = `${window.innerWidth}px`
-    canvas.style.height = `${window.innerHeight}px`
+    canvas.style.width = `${window.innerWidth * 0.5}px`
+    canvas.style.height = `${window.innerHeight * 0.5}px`
 
     const context = canvas.getContext('2d')
     context.scale(2, 2)
@@ -40,14 +41,19 @@ function App () {
     contextRef.current.lineTo(offsetX, offsetY)
     contextRef.current.stroke()
   }
-
   return (
-    <canvas
-      onMouseDown = {startDrawing}
-      onMouseUp = {finishDrawing}
-      onMouseMove = {draw}
-      ref = {canvasRef}
-    />
+    <div style = {{
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center'
+    }}>
+      <canvas
+        onMouseDown = {startDrawing}
+        onMouseUp = {finishDrawing}
+        onMouseMove = {draw}
+        ref = {canvasRef}
+      />
+    </div>
   )
 }
 export default App

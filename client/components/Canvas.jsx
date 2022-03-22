@@ -16,9 +16,9 @@ function Canvas () {
       context.lineTo(0.5 + x + p, bh + p)
     }
 
-    for (var x = 0; x <= bh; x += 40) {
-      context.moveTo(p, 0.5 + x + p)
-      context.lineTo(bw + p, 0.5 + x + p)
+    for (var y = 0; y <= bh; y += 40) {
+      context.moveTo(p, 0.5 + y + p)
+      context.lineTo(bw + p, 0.5 + y + p)
     }
     context.strokeStyle = 'black'
     context.stroke()

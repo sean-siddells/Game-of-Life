@@ -1,4 +1,4 @@
-function getValues(arr, board) {
+function getValues (arr, board) {
   const values = []
   arr.map(x => {
     values.push(board[x[0]][x[1]])

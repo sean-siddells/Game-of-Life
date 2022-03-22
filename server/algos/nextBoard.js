@@ -4,11 +4,12 @@ const createBoard = require('./createBoard')
 const displayBoard = require('./displayBoard')
 
 const board = createBoard(5)
+const nextBoardState = createBoard(5)
 
 function nextBoard (currentBoard) {
-  let newBoard = []
+  const newBoard = []
   for (let i = 0; i < currentBoard.length; i++) {
-    newBoard[i] = currentBoard[i].slice()
+    newBoard[i] = [...currentBoard[i]]
   }
   currentBoard.map((row, rowIndex) =>
     row.map((cell, cellIndex) => {

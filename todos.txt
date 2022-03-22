@@ -1,1 +1,1 @@
-remove current cell from neighboursArr
+fix Nextboard so that it is no longer changing the board as it goes,
